@@ -11,17 +11,21 @@ class Music extends Media {
         this.length = length;
     }
 
+    summary() {
+        return `Title: ${this.title}, Artist: ${this.artist}, Year: ${this.year}, Genre: ${this.genre}, Length: ${this.length} seconds`;
+    }
+
     static shortestAlbum(music){
         let shortest = Number.POSITIVE_INFINITY;
-        let smallestAlbum = null;
-        
+        let smallestSong = null;
+
         for (let i = 0; i < music.length; i++){
             if (music[i].length < shortest){
                 shortest = music[i].length;
-                smallestAlbum = music[i];
+                smallestSong = music[i];
             }
         }
-        return smallestAlbum;
+        return smallestSong;
     }
 }
 
