@@ -13,6 +13,8 @@ class Music extends Media {
 
     static shortestAlbum(music){
         let shortest = Number.POSITIVE_INFINITY;
+        let smallestAlbum = null;
+        
         for (let i = 0; i < music.length; i++){
             if (music[i].length < shortest){
                 shortest = music[i].length;
