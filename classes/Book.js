@@ -18,12 +18,15 @@ class Book extends Media {
 
     static highestRating(books) {
         let highestRating = 1;
+        let highestRatedBook = null;
+
         for (let i = 0; i < books.length; i++) {
             if (books[i].rating > highestRating) {
                 highestRating = books[i].rating;
+                highestRatedBook = books[i];
             }
         }
-        return highestRating;
+        return highestRatedBook;
     }
 }
 
